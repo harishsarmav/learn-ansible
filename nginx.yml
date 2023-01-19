@@ -2,10 +2,11 @@
   hosts: all
   become: yes
   tasks:
-    - name: install nginx
-      ansible.builtin.yum:
-        name: nginx
-        state: installed
-    - name: start nginx service
-      ansible.builtin.systemd:
-        name: nginx
+          - name: install nginx
+            ansible.builtin.yum:
+                    name: nginx
+                    state: installed
+          - name: start nginx service
+            ansible.builtin.systemd:
+                    name: nginx
+                    state: started
