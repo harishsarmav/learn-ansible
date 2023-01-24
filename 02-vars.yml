@@ -6,7 +6,7 @@
   tasks:
     - name: Access a variable
       ansible.builtin.debug:
-        msg: url =={{url}}
+        msg: url == {{url}}
 
 - name: Declare variable in another file
   hosts: all
@@ -16,7 +16,7 @@
   tasks:
     - name: Access a variable
       ansible.builtin.debug:
-        msg: url =={{url}}
+        msg: url == {{url}}
 ## vars can also be declared on the task level
 
 - name: Declare variable at task level
@@ -25,7 +25,7 @@
   tasks:
     - name: Declare and access a variable
       ansible.builtin.debug:
-        msg: url =={{url}}
+        msg: url == {{url}}
       vars:
         url: task.example.com
 
@@ -35,4 +35,4 @@
   tasks:
     - name: Declare and access a variable
       ansible.builtin.debug:
-        msg: url =={{url}}
+        msg: url == {{url}}
