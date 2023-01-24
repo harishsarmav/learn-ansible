@@ -28,3 +28,11 @@
         msg: url =={{url}}
       vars:
         url: task.example.com
+
+- name: Declare variable from inventory file
+  hosts: all
+  connection: local
+  tasks:
+    - name: Declare and access a variable
+      ansible.builtin.debug:
+        msg: url =={{url}}
