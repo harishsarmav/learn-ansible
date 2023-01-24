@@ -50,4 +50,4 @@
   connection: local
   tasks:
     - name: run a shell command
-      ansible.builtin.shell: runtime
+      ansible.builtin.shell: uptime
